@@ -11,5 +11,6 @@ indice = 0 # Índice con el que recorremos la palabra.
 
 palabra = input("Introduce la palabra para ver si es palíndromo o no: ")
 longitudPalabra = len(palabra) 
-while()    
+while
+
 
