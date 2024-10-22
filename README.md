@@ -1,0 +1,1 @@
+Ejercicios de Python, realizados en el módulo de Horas de libre configuración (HLC), del ciclo de grado superior en mantenimiento electrónico, 2º curso. Durante el curso 2024 - 25, en el IES Virgen de las Nieves de Granada.
