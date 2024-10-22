@@ -1,4 +1,4 @@
-"""(Uso de la estructura “elif”) Pide por teclado un valor
+"""(Uso de la estructura "elif”) Pide por teclado un valor
 entre 1 y 7 y debe indicarnos por pantalla el día de
 la semana correspondiente."""
 
