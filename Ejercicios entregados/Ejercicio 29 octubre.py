@@ -73,7 +73,7 @@ def menu():
             actualizarCantidad()
 
         elif opcion == 4: #  Eliminar un producto al inventario.
-            actualizarCantidad()
+            eliminarProducto()
 
         elif opcion == 5: #  Mostar todos los productos del inventario..
             listadoProductos()
