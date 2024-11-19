@@ -9,7 +9,7 @@ inventario = {} # Diccionario que contendrá toda la estructura.
 
 # Definición de funciones:
 
-def agregarProducto():
+def agregarProducto(): #1
     nombre = input("¿Qué producto quieres añadir al inventario? ")
     nombre =  nombre.capitalize() # Para evitar duplicados por mayúsculas.
     if nombre in inventario:
@@ -24,17 +24,18 @@ def agregarProducto():
         print("")
         input("Pulsa una tecla para continuar...")
 
+def buscarProducto(): #2
+    nombre = input("¿De que producto quieres ver detalles? ")
+    nombre =  nombre.capitalize() # Para evitar duplicados por mayúsculas.
+    if nombre not in inventario:
+        print(f"El producto '{nombre}' no se encuentra en el inventario.")
+        print("")
+        input("Pulsa una tecla para continuar...")
+    else:
+        print(f"Producto: {nombre}, Cantidad: {inventario[nombre]["cantidad"]}, Precio: {inventario[nombre]["precio"]}")
+        input("Pulsa una tecla para continuar...")
 
-def listadoProductos():
-    print("Listado de los elementos...")
-    for nombre, valor in inventario.items(): # Recorro todo el diccionario principal.
-        print(f"Producto: {nombre}, Precio: {valor["precio"]}, Cantidad: {valor["cantidad"]}.")
-
-    print("")
-    input("Pulsa una tecla para continuar...")     
-
-
-def actualizarCantidad():
+def actualizarCantidad(): #3
     nombre = input("¿De qué producto quieres modificar el stock? ")
     nombre =  nombre.capitalize() # Para evitar duplicados por mayúsculas.
     if nombre not in inventario:
@@ -47,6 +48,28 @@ def actualizarCantidad():
         print(f"El producto '{nombre}' ha actualizado correctamente su stock a {cantidad} unidades.")
         print("")
         input("Pulsa una tecla para continuar...")
+
+def eliminarProducto(): #4
+    nombre = input("¿Qué producto quieres eliminar del inventario? ")
+    nombre =  nombre.capitalize() # Para evitar duplicados por mayúsculas.
+    if nombre not in inventario:
+        print(f"El producto '{nombre}' no se encuentra en el inventario.")
+        print("")
+        input("Pulsa una tecla para continuar...")
+    else:
+        del[inventario[nombre]]
+        input(f"{nombre} fue eliminado. Pulsa una tecla para continuar...")
+
+def listadoProductos(): #5
+    if inventario: # Si el inventario no está vacío, contiene elementos.
+        print("Listado de los elementos...")
+        for nombre, valor in inventario.items(): # Recorro todo el diccionario principal.
+            print(f"Producto: {nombre}, Precio: {valor["precio"]}, Cantidad: {valor["cantidad"]}.")
+    else:
+        print("El inventario está vacío: no hay elementos que mostrar")
+    print("")
+    input("Pulsa una tecla para continuar...")     
+
 
 def menu():
     opcion = 0
