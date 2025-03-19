@@ -1,4 +1,5 @@
-
+""" Programa de inventario, al que añadimos la carga automática del diccionario al inicio del programa y la grabación
+al finalizarlo, en formato .json"""
 
 
 # Importación de librerías:
